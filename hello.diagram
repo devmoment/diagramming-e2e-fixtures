@@ -1,0 +1,33 @@
+diagram {
+  version: "1"
+  type: flowchart
+  title: "E2E Smoke Diagram"
+  direction: TB
+}
+
+start {
+  id: cm9b0000000000000001
+  label: "Start"
+  shape: rounded
+}
+
+process {
+  id: cm9b0000000000000002
+  label: "Do Work"
+  shape: rectangle
+}
+
+done {
+  id: cm9b0000000000000003
+  label: "Done"
+  shape: rounded
+}
+
+start -> process {
+  id: cm9f0000000000000001
+}
+
+process -> done {
+  id: cm9f0000000000000002
+  label: "complete"
+}
