@@ -1,0 +1,92 @@
+diagram {
+  version: "1"
+  type: architecture
+  title: "Order Service Architecture"
+  direction: LR
+}
+
+frontend {
+  id: cm9a0000000000000001
+  label: "Frontend"
+  shape: rounded
+  style: {
+    fill: "#f3f4f6"
+    stroke: "#9ca3af"
+  }
+}
+
+backend {
+  id: cm9a0000000000000002
+  label: "Backend Services"
+
+  api-gateway {
+    id: cm9a0000000000000003
+    label: "API Gateway"
+    shape: rounded
+    style: {
+      fill: "#dbeafe"
+      stroke: "#3b82f6"
+    }
+  }
+
+  order-service {
+    id: cm9a0000000000000004
+    label: "Order Service"
+    shape: rectangle
+  }
+
+  inventory-service {
+    id: cm9a0000000000000005
+    label: "Inventory Service"
+    shape: rectangle
+  }
+}
+
+postgres {
+  id: cm9a0000000000000006
+  label: "PostgreSQL"
+  shape: cylinder
+  at (900, 200)
+  style: {
+    fill: "#d1fae5"
+    stroke: "#10b981"
+  }
+}
+
+redis {
+  id: cm9a0000000000000007
+  label: "Redis"
+  shape: cylinder
+  at (900, 380)
+  style: {
+    fill: "#fef3c7"
+    stroke: "#f59e0b"
+  }
+}
+
+frontend -> api-gateway {
+  id: cm9e0000000000000001
+  label: "HTTPS"
+}
+
+api-gateway -> order-service {
+  id: cm9e0000000000000002
+}
+
+api-gateway -> inventory-service {
+  id: cm9e0000000000000003
+}
+
+order-service -> postgres {
+  id: cm9e0000000000000004
+  label: "reads/writes"
+}
+
+inventory-service -> postgres {
+  id: cm9e0000000000000005
+}
+
+order-service --> redis {
+  id: cm9e0000000000000006
+  label: "cache"
+}
