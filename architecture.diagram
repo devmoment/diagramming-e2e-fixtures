@@ -7,7 +7,7 @@ diagram {
 
 frontend {
   id: cm9a0000000000000001
-  label: "Frontend"
+  label: "Frontend REMOTE-DIVERGE-T5"
   shape: rounded
   style: {
     fill: "#f3f4f6"
