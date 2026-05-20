@@ -31,7 +31,7 @@ backend {
 
   order-service {
     id: cm9a0000000000000004
-    label: "Inventory Svc T5-20260520"
+    label: "Inventory Service"
     shape: rectangle
     size (208, 40)
   }
