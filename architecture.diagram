@@ -7,7 +7,7 @@ diagram {
 
 frontend {
   id: cm9a0000000000000001
-  label: "Frontend REMOTE-DIVERGE-T5"
+  label: "Frontend"
   shape: rounded
   style: {
     fill: "#f3f4f6"
@@ -31,7 +31,7 @@ backend {
 
   order-service {
     id: cm9a0000000000000004
-    label: "Inventory Svc T5-20260520"
+    label: "Inventory Service"
     shape: rectangle
     size (208, 40)
   }
