@@ -7,7 +7,7 @@ diagram {
 
 frontend {
   id: cm9a0000000000000001
-  label: "Frontend"
+  label: "Frontend REMOTE-DIVERGE"
   shape: rounded
   style: {
     fill: "#f3f4f6"
@@ -31,15 +31,16 @@ backend {
 
   order-service {
     id: cm9a0000000000000004
-    label: "Inventory Service"
+    label: "Order Service"
     shape: rectangle
-    size (208, 40)
+    at (166, 126)
   }
 
   inventory-service {
     id: cm9a0000000000000005
     label: "Inventory Service"
     shape: rectangle
+    at (-114.58708589565563, 69.7486609799643)
   }
 }
 
@@ -47,7 +48,7 @@ postgres {
   id: cm9a0000000000000006
   label: "PostgreSQL"
   shape: cylinder
-  at (900, 200)
+  at (1264.9014084507041, 306.3098591549296)
   style: {
     fill: "#d1fae5"
     stroke: "#10b981"
